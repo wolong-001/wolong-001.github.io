@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加 user-scalable=no 来禁用用户缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>个人引导页</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .beijing-time {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>工具箱</h1>
+        <p>圈够5000必退，回归只是因为想买台电脑，我不想在用26键写代码了，真的很累😭</p>
+        <div class="beijing-time" id="beijing-time">加载中...</div>
+        <a href="#" class="button">进入主页</a>
+        <a href="#" class="button">快手</a>
+        <a href="#" class="button">QQ群</a>
+        <a href="#" class="button">GitHub</a>
+    </div>
+    <script>
+        // 获取北京时间
+        function getBeijingTime() {
+            const now = new Date();
+            const beijingTime = now.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false });
+            document.getElementById('beijing-time').textContent = '北京时间: ' + beijingTime;
+        }
+
+        // 每秒更新一次时间
+        setInterval(getBeijingTime, 1000);
+        getBeijingTime(); // 初始化时立即显示时间
+    </script>
+</body>
+</html>
