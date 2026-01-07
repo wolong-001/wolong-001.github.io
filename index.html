@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <!-- 添加 user-scalable=no 来禁用用户缩放 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>个人引导页</title>
-    <style>
+ <head> 
+  <meta charset="UTF-8"> 
+  <!-- 添加 user-scalable=no 来禁用用户缩放 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+  <title>个人引导页</title> 
+  <style>
         body, html {
             height: 100%;
             margin: 0;
@@ -54,17 +53,21 @@
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>工具箱</h1>
-        <p>你们的支持就是对我最大的努力</p>
-        <div class="beijing-time" id="beijing-time">加载中...</div>
-        <a href="https://drive.uc.cn/s/c20f993537084" class="button" target="_blank">进入文件</a>
-        <a href="gjx.apk" class="button" download>下载工具箱</a>
-    </div>
-    <script>
+    </style> 
+  <script src="js/jq.js"></script> 
+ </head> 
+ <body id="v1"> 
+  <div id="v2" class="container"> 
+   <h1 id="v3">工具箱</h1> 
+   <p id="v4">你们的支持就是对我最大的努力</p> 
+   <div class="beijing-time" id="beijing-time">
+    北京时间: 2026/1/7 22:27:02
+   </div> 
+   <a id="v5" href="https://drive.uc.cn/s/c20f993537084" class="button" target="_blank">进入文件</a> 
+   <a id="v6" href="gjx.apk" class="button" download="">下载工具箱</a> 
+   <audio id="audioPlayer" src="晴天.mp3" controls=""></audio> 
+  </div> 
+  <script>
         // 获取北京时间
         function getBeijingTime() {
             const now = new Date();
@@ -75,6 +78,6 @@
         // 每秒更新一次时间
         setInterval(getBeijingTime, 1000);
         getBeijingTime(); // 初始化时立即显示时间
-    </script>
-</body>
+    </script>  
+ </body>
 </html>
